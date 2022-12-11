@@ -19,6 +19,7 @@ To run this project, install it locally:
 ```
 $ git clone https://github.com/PepesSpi123/project_1
 $ npm install cypress
+$ npm install unique-username-generator --save
 ```
 ## Running test:
 ```
