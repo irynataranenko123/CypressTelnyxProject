@@ -7,7 +7,7 @@ describe('Sign Up', () => {
         cy.visit('https://telnyx.com/')
         cy.acceptCookies()
     })
-    xit('A1 - Checking that it is not possible to register a new user with invalid email', () => {
+    it('A1 - Checking that it is not possible to register a new user with invalid email', () => {
         
         mainPage.clickSignUp()
         signUpPage.fillWorkEmail(testData.invalidEmail)
@@ -19,7 +19,7 @@ describe('Sign Up', () => {
         signUpPage.checkingInvalidDataError()
     })
 
-    xit('A2 - Checking that it is not possible to register a new user with valid but not business email', () => {
+    it('A2 - Checking that it is not possible to register a new user with valid but not business email', () => {
         mainPage.clickSignUp()
         signUpPage.fillWorkEmail(testData.notBusinessEmail)
         signUpPage.fillFullName(testData.fullName)

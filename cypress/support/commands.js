@@ -26,7 +26,7 @@
 
 Cypress.Commands.add('acceptCookies', () => {
     cy.get("body").then($body => {
-        if ($body.find('.sc-df34c536-0 > :nth-child(1) > .sc-5d3a275a-1').length > 0) {   
+        if ($body.find('.sc-df34c536-0 > :nth-child(1) > .sc-5d3a275a-1').length>0) {   
             cy.get('.sc-df34c536-0 > :nth-child(1) > .sc-5d3a275a-1').click()
         }
     })

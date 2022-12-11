@@ -1,6 +1,6 @@
 import mainPage from '../../pages/main.page'
 
-describe('Go to main page', () => {
+describe('Go to linkedIn', () => {
     it('A10 - Check that the site is linked with LinkedIn', () => {
         cy.visit('https://telnyx.com/')
         cy.acceptCookies()
