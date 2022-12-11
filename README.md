@@ -22,7 +22,7 @@ $ npm install cypress
 ```
 ## Running test:
 ```
-- Running all tests: npx cypress run --spec "cypress/e2e/tests/*"
+- Running all tests: npx cypress run
 - Running a single test file: npx cypress run --spec "cypress/e2e/tests/goToMain.cy.js"
 ```
 ## Opening the App: 
