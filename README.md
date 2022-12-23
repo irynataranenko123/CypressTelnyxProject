@@ -10,7 +10,7 @@ In this projects:
 ```
 ## Technologies
 ```
-- Node.js: 16.14.2
+- Node.js: 18.12.1
 - cypress: 12.0.2
 - unique-username-generator: 1.1.3
 ```
