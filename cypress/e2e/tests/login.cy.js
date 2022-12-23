@@ -16,6 +16,7 @@ describe('Log In', () => {
             loginPage.fillPassword(data.password)
         })
         loginPage.submitLogin()
+        cy.screenshot()
         loginPage.checkNotConfirmedEmailError()
     })
 
