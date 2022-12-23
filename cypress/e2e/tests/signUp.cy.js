@@ -16,6 +16,7 @@ describe('Sign Up', () => {
         })
         signUpPage.checkAgreeCheckbox()
         signUpPage.submitSignUp()
+        cy.screenshot()
         signUpPage.checkInvalidDataError()
     })
 
@@ -28,6 +29,7 @@ describe('Sign Up', () => {
         })
         signUpPage.checkAgreeCheckbox()
         signUpPage.submitSignUp()
+        cy.screenshot()
         signUpPage.checkNotBusinessEmailError()
     })
 
