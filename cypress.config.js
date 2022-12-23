@@ -6,12 +6,12 @@ module.exports = defineConfig({
   reporterOptions: {
     configFile: "reporter-config.json"
   },
-  
+
   chromeWebSecurity: false,
-  defaultCommandTimeout: 6000,
-  pageLoadTimeout: 65000,
+  defaultCommandTimeout: 5000,
+  pageLoadTimeout: 30000,
   retries	: { "runMode": 3, "openMode": 3 },
-  video: false,
+  //video: false,
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
