@@ -1,7 +1,10 @@
-import mainPage from '../../pages/main.page'
+import MainPage from "../../pages/main.page"
 
 describe('Go to linkedIn', () => {
-    it('A10 - Check that the site is linked with LinkedIn', () => {
+
+    const mainPage = new MainPage
+
+    it('A10 - Сhecking the functionality of the "LinkedIn" reference on the main page', () => {
         cy.visit('https://telnyx.com/')
         cy.acceptCookies()
         mainPage.clickLinkedInBtn()

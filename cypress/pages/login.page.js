@@ -1,32 +1,36 @@
-class LoginPage {
+import MainPage from "./main.page"
 
-    elements ={
-        inputBusinessEmail : () => cy.get('[name="email"]'),
-        inputPassword : () => cy.get('[name="password"]'), 
-        submitBtn : () => cy.get('.Button__StyledDefaultButton-sc-44gl5i-0'),
-        errorNotConfirmedEmail : () => cy.contains('You must confirm your email before you can sign in'),
-        errorInvalidData : () => cy.contains('That email and password combination is not valid'),
-        forgotPasswordBtn : () => cy.get('[href="/#/login/password-reset"]')
+export default class LoginPage extends MainPage {
+
+    constructor() {
+
+        super (),
+        this.inputBusinessEmail = () => {return cy.get('[name="email"]')},
+        this.inputPassword = () => {return cy.get('[name="password"]')}, 
+        this.submitBtn = () => {return cy.get('.Button__StyledDefaultButton-sc-44gl5i-0')},
+        this.errorMessage = () => {return cy.get('.Message__MessageCopy-sc-1lbs5ge-2')},
+        this.forgotPasswordBtn = () => {return cy.get('[href="/#/login/password-reset"]')}
     }
 
     fillBusinessEmail(email) {
-        this.elements.inputBusinessEmail().first().type(email).should('have.value', email)
+        this.inputBusinessEmail().first().type(email).should('have.value', email)
     }
     fillPassword(password) {
-        this.elements.inputPassword().type(password).should('have.value', password)
+        this.inputPassword().type(password).should('have.value', password)
     }
     submitLogin(){
-        this.elements.submitBtn().click()
+        this.submitBtn().click()
     }
-    checkingNotConfirmedEmailError(){
-        this.elements.errorNotConfirmedEmail().should('be.visible')
+    checkNotConfirmedEmailError(){
+        this.errorMessage().should('be.visible')
+        .and('contain', 'You must confirm your email before you can sign in')
     }
-    checkingInvalidDataError(){
-        this.elements.errorInvalidData().should('be.visible')
+    checkInvalidDataError(){
+        this.errorMessage().should('be.visible')
+        .and('contain', 'That email and password combination is not valid')
     } 
     clickForgotPasswordBtn() {
-        this.elements.forgotPasswordBtn().click()
+        this.forgotPasswordBtn().click()
         cy.url().should('include','/password-reset')
     }
 }
-module.exports = new LoginPage ()

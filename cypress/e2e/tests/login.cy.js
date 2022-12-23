@@ -1,26 +1,31 @@
-import mainPage from '../../pages/main.page'
-import loginPage from '../../pages/login.page'
-import * as testData from '../../src/utils/const'
+import LoginPage from "../../pages/login.page"
 
 describe('Log In', () => {
+
+    const loginPage = new LoginPage
+
     beforeEach(() => {
         cy.visit('https://telnyx.com/')
         cy.acceptCookies()
+    })    
+
+    it('A3 - Checking the sign in of an existing user with not confirmed email',  () => {
+        loginPage.clickLogin()
+        cy.fixture('const').then((data) => {
+            loginPage.fillBusinessEmail(data.validEmail)
+            loginPage.fillPassword(data.password)
+        })
+        loginPage.submitLogin()
+        loginPage.checkNotConfirmedEmailError()
     })
 
-    it('A3 - Check the sign in of an existing user with not confirmed email', () => {
-        mainPage.clickLogin()
-        loginPage.fillBusinessEmail(testData.validEmail)
-        loginPage.fillPassword(testData.password)
+    it('A4 - Checking the sign in of an not existing user', () => {
+        loginPage.clickLogin()
+        cy.fixture('const').then((data) => {
+            loginPage.fillBusinessEmail(data.invalidEmail)
+            loginPage.fillPassword(data.password)
+        })
         loginPage.submitLogin()
-        loginPage.checkingNotConfirmedEmailError()
-    })
-
-    it('A4 - Check the sign in of an not existing user', () => {
-        mainPage.clickLogin()
-        loginPage.fillBusinessEmail(testData.email)
-        loginPage.fillPassword(testData.password)
-        loginPage.submitLogin()
-        loginPage.checkingInvalidDataError()
+        loginPage.checkInvalidDataError()
     })
 })

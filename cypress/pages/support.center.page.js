@@ -1,23 +1,22 @@
+import MainPage from "./main.page"
 
+export default new class SupportCenter extends MainPage{
 
-class SupportCenter {
-
-    elements ={
-
-        searchField : () => cy.get('[name="q"]'),
-        article : () => cy.get('[href="/en/articles/1130637-what-is-telnyx"]'),
-        articleTitle: () => cy.get('.t__h1').contains('What is')
+    constructor() {
+        super(),
+        this.searchField = () => {return cy.get('[name="q"]')},
+        this.article = () => {return cy.get('[href="/en/articles/1130637-what-is-telnyx"]')},
+        this.articleTitle= () => {return cy.get('.t__h1').contains('What is')}
 
     }
 
     fillSearchField(text){
-        this.elements.searchField().type(text).should('have.value', text).type('{enter}')
+        this.searchField().type(text).should('have.value', text).type('{enter}')
     }
     openArticle (){
-        this.elements.article().click()
+        this.article().click()
     }
-    chickingArticleTitle(text) {
-        this.elements.articleTitle().should('contain', text)
+    checkArticleTitle(text) {
+        this.articleTitle().should('contain', text)
     }
 }
-module.exports = new SupportCenter()

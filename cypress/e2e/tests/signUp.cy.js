@@ -1,45 +1,34 @@
-import mainPage from "../../pages/main.page";
 import signUpPage  from "../../pages/sign.up.page";
-import * as testData from '../../src/utils/const'
 
 describe('Sign Up', () => {
     beforeEach(() => {
         cy.visit('https://telnyx.com/')
         cy.acceptCookies()
     })
+
     it('A1 - Checking that it is not possible to register a new user with invalid email', () => {
         
-        mainPage.clickSignUp()
-        signUpPage.fillWorkEmail(testData.invalidEmail)
-        signUpPage.fillFullName(testData.fullName)
-        signUpPage.fillPassword(testData.password)
+        signUpPage.clickSignUp()
+        cy.fixture('const').then((data) => {
+            signUpPage.fillWorkEmail(data.invalidEmail)
+            signUpPage.fillFullName(data.fullName)
+            signUpPage.fillPassword(data.password)
+        })
         signUpPage.checkAgreeCheckbox()
         signUpPage.submitSignUp()
-        cy.wait(5000)
-        signUpPage.checkingInvalidDataError()
+        signUpPage.checkInvalidDataError()
     })
 
     it('A2 - Checking that it is not possible to register a new user with valid but not business email', () => {
-        mainPage.clickSignUp()
-        signUpPage.fillWorkEmail(testData.notBusinessEmail)
-        signUpPage.fillFullName(testData.fullName)
-        signUpPage.fillPassword(testData.password)
+        signUpPage.clickSignUp()
+        cy.fixture('const').then((data) => {
+            signUpPage.fillWorkEmail(data.notBusinessEmai)
+            signUpPage.fillFullName(data.fullName)
+            signUpPage.fillPassword(data.password)
+        })
         signUpPage.checkAgreeCheckbox()
         signUpPage.submitSignUp()
-        cy.wait(5000)
-        signUpPage.checkingNotBusinessEmailError()
+        signUpPage.checkNotBusinessEmailError()
     })
-    it('A7 - Check the registration of a new user with central "Email" field ', () => {
-        mainPage.fillEmail(testData.email)
-        signUpPage.fillFullName(testData.fullName)
-        signUpPage.fillPassword(testData.password)
-        signUpPage.checkAgreeCheckbox()
-        signUpPage.submitSignUp()
-        signUpPage.submitSignUp()
-        cy.wait(10000)
-        cy.url().should('include', '/verify-email/f')
-        signUpPage.checkingSuccessMessage()
-     
 
-    })
 })

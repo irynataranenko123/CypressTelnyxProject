@@ -1,54 +1,52 @@
+import MainPage from "./main.page"
 
+export default new class SignUpPage extends MainPage{
 
-class SignUpPage{
+    constructor() {
 
-
-    elements ={
-        inputWorkEmail : () => cy.get('#email'),
-        inputFullName : () => cy.get('#full_name'),
-        inputPassword : () => cy.get('#password'),
-        agreeCheckbox : () => cy.get('.sc-26f7330-5 > .sc-e117dd75-0'),
-        agreeTermsError : () => cy.contains('Please accept the terms and conditions'),
-        submitBtn : () => cy.get('[type="submit"]'),
-        errorInvalidData : () => cy.contains('One or more fields are not valid'),
-        errorNotBusinessEmail : () => cy.contains('We were unable to create a new account with this email'),
-        successMessage : () => cy.contains("We've sent you an email to activate your account"),
-        siteLogo : () => cy.get('[href="/"]')
+        super(),
+        this.inputWorkEmail = () => {return cy.get('#email')},
+        this.inputFullName = () => {return cy.get('#full_name')},
+        this.inputPassword = () => {return cy.get('#password')},
+        this.agreeCheckbox = () => {return cy.get('.sc-26f7330-5 > .sc-e117dd75-0')},
+        this.submitBtn = () => {return cy.get('[type="submit"]')},
+        this.errorMessage = () => {return cy.get('.sc-570b157-1')}
+        this.siteLogo = () => {return cy.get('[href="/"]')}
+       
     }
     
 
     fillWorkEmail(email) {
-        this.elements.inputWorkEmail().type(email).should('have.value', email)
+        this.inputWorkEmail().type(email).should('have.value', email)
     }
 
     fillFullName(fullName) {
-        this.elements.inputFullName().type(fullName).should('have.value', fullName)
+        this.inputFullName().type(fullName).should('have.value', fullName)
     }
     
     fillPassword(password) {
-        this.elements.inputPassword().type(password).should('have.value', password)
+        this.inputPassword().type(password).should('have.value', password)
     }
+
     checkAgreeCheckbox(){
-        this.elements.agreeCheckbox().click()
+        this.agreeCheckbox().click()
     }
 
     submitSignUp(){
-        this.elements.submitBtn().click()
-
+        this.submitBtn().click()
     }
 
-    checkingInvalidDataError(){
-        this.elements.errorInvalidData().should('be.visible')
+    checkInvalidDataError(){
+        this.errorMessage().should('be.visible')
+        .and('contain', 'One or more fields are not valid')
     }
 
-    checkingNotBusinessEmailError(){
-        this.elements.errorNotBusinessEmail().should('be.visible')
+    checkNotBusinessEmailError(){
+        this.errorMessage().should('be.visible')
+        .and('contain', 'We were unable to create a new account with this email')
     }
-    checkingSuccessMessage() {
-        this.elements.successMessage().should('be.visible')
-    }
+
     clickSiteLogo () {
-        this.elements.siteLogo().click()
+        this.siteLogo().click()
     }
 }
-module.exports = new SignUpPage ()

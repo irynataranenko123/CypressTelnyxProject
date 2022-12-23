@@ -1,11 +1,13 @@
-import mainPage from '../../pages/main.page'
+import MainPage from '../../pages/main.page'
 
 describe('Menu', () => {
 
-    it("A8 - Check that main page contains categories such 'Products', 'Solutions', 'Network', 'Resoucres', 'Company' and 'Pricing'", () => {
+    const mainPage = new MainPage
+
+    it("A8 - Checking that when you open the menu tab, categories 'Products', 'Solutions', 'Network', 'Resoucres', 'Company' and 'Pricing' are visible", () => {
         cy.visit('https://telnyx.com/')
         cy.acceptCookies()
         mainPage.openMenu()
-        mainPage.checkingMenuElementsIsVisible ()
+        mainPage.checkMenuElementsIsVisible ()
     })
 })

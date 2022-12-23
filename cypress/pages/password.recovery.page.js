@@ -1,20 +1,24 @@
-class PasswordRecoveryPage {
+import LoginPage from "./login.page"
 
-    elements ={
-        inputEmail : () => cy.get('[name="email"]'),
-        resetPasswordBtn : () => cy.get('[type="submit"]'),
-        successMessage : () => cy.contains('We have accepted your password reset request')
+export default new class PasswordRecoveryPage extends LoginPage{
+
+    constructor () {
+
+        super(),
+        this.inputEmail = () => {return cy.get('[name="email"]')},
+        this.resetPasswordBtn = () => {return cy.get('[type="submit"]')},
+        this.successMessage = () => {return cy.get('.Text-dgspRF > div')}
     }
 
     fillEmail(email){
-        this.elements.inputEmail().type(email).should('have.value', email)
+        this.inputEmail().type(email).should('have.value', email)
     }
     clickResetPasswordBtn(){
-        this.elements.resetPasswordBtn().click()
+        this.resetPasswordBtn().click()
     }
-    checkingSuccessMessage (){
-        this.elements.successMessage.should('be.visible')
+    checkSuccessMessage (){
+        this.successMessage().should('be.visible')
+        .and('contain', 'We have accepted your password reset request')
     } 
 }
 
-module.exports = new PasswordRecoveryPage ()
