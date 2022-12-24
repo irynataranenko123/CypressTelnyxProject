@@ -1,36 +1,39 @@
+
 name: Create Cypress report
+
 on:
   push:
-    branches:
-      - 'master'
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 jobs:
+  build:
 
-
-  runs-on: ubuntu-latest
-
-  steps:
-    - uses: actions/checkout@v3
-    - name: Install a project with a clean slate
-      run: |
-        npm ci
-        $(npm bin)/cypress cache path
-        $(npm bin)/cypress cache list
-        $(npm bin)/cypress verify
-    - name: Run Cypress tests
-      run: npm run test:chrome
-      continue-on-error: true
-    - name: Copy test execution videos
-      run: |
-        mkdir docs
-        cp -r cypress/videos docs/videos
-    - name: Merge test results into one
-      run: npm run report:merge
-    - name: Generate HTML report
-      run: npm run report:generate
-    - name: Deploy report page
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+    runs-on: macos-latest
+      
+    steps:
+      - name: Install a project with a clean slate
+        run: |
+          npm ci
+          $(npm bin)/cypress cache path
+          $(npm bin)/cypress cache list
+          $(npm bin)/cypress verify
+      - name: Run Cypress tests
+        run: npm run test:chrome
+        continue-on-error: true
+      - name: Copy test execution videos
+        run: |
+          mkdir docs
+          cp -r cypress/videos docs/videos
+      - name: Merge test results into one
+        run: npm run report:merge
+      - name: Generate HTML report
+        run: npm run report:generate
+      - name: Deploy report page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
