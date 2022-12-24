@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-24T00:10:54.460Z",
+    "end": "2022-12-24T00:11:08.050Z",
+    "duration": 13590,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2be8d11d-49c4-44bc-af1a-6b9cfbd89543",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/linkedIn.cy.js",
+      "file": "cypress/e2e/tests/linkedIn.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b3489dc5-9128-48da-b319-f63fb170a059",
+          "title": "Go to linkedIn",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A10 - Сhecking the functionality of the \"LinkedIn\" reference on the main page",
+              "fullTitle": "Go to linkedIn A10 - Сhecking the functionality of the \"LinkedIn\" reference on the main page",
+              "timedOut": null,
+              "duration": 9437,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://telnyx.com/');\ncy.acceptCookies();\nmainPage.clickLinkedInBtn();\ncy.url().should('include', 'linkedin');",
+              "err": {},
+              "uuid": "545967e2-61f9-4e15-b39f-72774a5ef5dc",
+              "parentUUID": "b3489dc5-9128-48da-b319-f63fb170a059",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "545967e2-61f9-4e15-b39f-72774a5ef5dc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9437,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

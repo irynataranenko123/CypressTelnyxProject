@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-24T00:14:46.027Z",
+    "end": "2022-12-24T00:14:58.205Z",
+    "duration": 12178,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fddf628c-99c9-4a50-b379-7da90720aff3",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/supportCenter.cy.js",
+      "file": "cypress/e2e/tests/supportCenter.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "102a4610-2c7d-4b1f-af59-14b8ee222cfb",
+          "title": "Use a support Center",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A6 - Checking the ability to use a support center",
+              "fullTitle": "Use a support Center A6 - Checking the ability to use a support center",
+              "timedOut": null,
+              "duration": 9039,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_supportCenter.default.clickSupportCenterBtn();\ncy.fixture('const').then(data => {\n  _supportCenter.default.fillSearchField(data.text);\n  _supportCenter.default.openArticle();\n  _supportCenter.default.checkArticleTitle(data.text);\n});",
+              "err": {},
+              "uuid": "72432e8e-f4bc-41e4-b10f-1ba69440957b",
+              "parentUUID": "102a4610-2c7d-4b1f-af59-14b8ee222cfb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "72432e8e-f4bc-41e4-b10f-1ba69440957b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9039,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

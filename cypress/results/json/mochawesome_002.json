@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-24T00:10:22.992Z",
+    "end": "2022-12-24T00:10:38.431Z",
+    "duration": 15439,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "59db175c-e33f-46ea-a181-4cf063bd0963",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/goToSignUp.cy.js",
+      "file": "cypress/e2e/tests/goToSignUp.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "645cef1d-9d9c-499f-977d-1ec89b3b584b",
+          "title": "Go to Sign Up",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A7 -  Checking the ability to go to the sign-up page with the central ‘Email’ field",
+              "fullTitle": "Go to Sign Up A7 -  Checking the ability to go to the sign-up page with the central ‘Email’ field",
+              "timedOut": null,
+              "duration": 11104,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://telnyx.com/');\ncy.acceptCookies();\ncy.fixture('const').then(data => {\n  mainPage.fillEmail(data.validEmail);\n});\nmainPage.clickTryForFreeBtn();\ncy.url().should('include', '/sign-up');",
+              "err": {},
+              "uuid": "263f1661-75d3-4ac9-bce6-e4fb3750089e",
+              "parentUUID": "645cef1d-9d9c-499f-977d-1ec89b3b584b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "263f1661-75d3-4ac9-bce6-e4fb3750089e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11104,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
