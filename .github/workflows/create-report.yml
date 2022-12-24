@@ -13,10 +13,11 @@ jobs:
     runs-on: macos-latest
       
     steps:
-      - name: Install a project with 
+      - name: Install 
         run: |
           npm ci
           npm install cypress
+          npm run build --if-present
       - name: Run Cypress tests
         run: npm run test:chrome
         continue-on-error: true
