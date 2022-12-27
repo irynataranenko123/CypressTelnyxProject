@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 9,
-    "tests": 11,
-    "passes": 11,
+    "suites": 8,
+    "tests": 10,
+    "passes": 10,
     "pending": 0,
     "failures": 0,
-    "start": "2022-12-23T23:23:26.946Z",
-    "end": "2022-12-24T00:14:58.205Z",
-    "duration": 167150,
-    "testsRegistered": 11,
+    "start": "2022-12-27T13:33:38.343Z",
+    "end": "2022-12-27T13:52:01.728Z",
+    "duration": 346398,
+    "testsRegistered": 10,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,65 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c878b010-eb49-47e9-9a7d-f4ad91535eff",
-      "title": "",
-      "fullFile": "cypress/e2e/tests/supportCenter.cy.js",
-      "file": "cypress/e2e/tests/supportCenter.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "86cb8794-a760-44a0-8d9f-50a7dec8b277",
-          "title": "Use a support Center",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "A6 - Checking the ability to use a support center",
-              "fullTitle": "Use a support Center A6 - Checking the ability to use a support center",
-              "timedOut": null,
-              "duration": 11513,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "_supportCenter.default.clickSupportCenterBtn();\ncy.fixture('const').then(data => {\n  _supportCenter.default.fillSearchField(data.text);\n  _supportCenter.default.openArticle();\n  _supportCenter.default.checkArticleTitle(data.text);\n});",
-              "err": {},
-              "uuid": "b8348fb3-0644-4dc2-bb20-6d9dc5ef30ea",
-              "parentUUID": "86cb8794-a760-44a0-8d9f-50a7dec8b277",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "b8348fb3-0644-4dc2-bb20-6d9dc5ef30ea"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 11513,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "9929483b-8bf4-4e9b-b6fa-847de9ab6366",
+      "uuid": "410f1092-ff54-48de-a329-e843665ad523",
       "title": "",
       "fullFile": "cypress/e2e/tests/goToMain.cy.js",
       "file": "cypress/e2e/tests/goToMain.cy.js",
@@ -85,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "921ba419-84a8-4196-90a0-f16815319dfb",
+          "uuid": "66706806-a253-47b0-a80b-8e5ae68bb15b",
           "title": "Go to main page",
           "fullFile": "",
           "file": "",
@@ -96,7 +38,7 @@
               "title": "A9 - Checking the ability to return to the main page by clicking on site logo",
               "fullTitle": "Go to main page A9 - Checking the ability to return to the main page by clicking on site logo",
               "timedOut": null,
-              "duration": 11530,
+              "duration": 24345,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -105,20 +47,20 @@
               "context": null,
               "code": "cy.visit('https://telnyx.com/');\ncy.acceptCookies();\n_signUp.default.clickSignUp();\n_signUp.default.clickSiteLogo();\ncy.url().should('be.equal', 'https://telnyx.com/');",
               "err": {},
-              "uuid": "7a0d90f8-9d08-47f4-9ba3-0d4c341e8153",
-              "parentUUID": "921ba419-84a8-4196-90a0-f16815319dfb",
+              "uuid": "ef4c9ed7-55f1-4947-8efd-1ac9c6511906",
+              "parentUUID": "66706806-a253-47b0-a80b-8e5ae68bb15b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7a0d90f8-9d08-47f4-9ba3-0d4c341e8153"
+            "ef4c9ed7-55f1-4947-8efd-1ac9c6511906"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11530,
+          "duration": 24345,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -134,7 +76,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "59db175c-e33f-46ea-a181-4cf063bd0963",
+      "uuid": "e33c97b1-bd42-4fba-9bb6-7a3d59b77887",
       "title": "",
       "fullFile": "cypress/e2e/tests/goToSignUp.cy.js",
       "file": "cypress/e2e/tests/goToSignUp.cy.js",
@@ -143,7 +85,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "645cef1d-9d9c-499f-977d-1ec89b3b584b",
+          "uuid": "8e61f656-35cc-450c-9660-a62efb5a64de",
           "title": "Go to Sign Up",
           "fullFile": "",
           "file": "",
@@ -154,7 +96,7 @@
               "title": "A7 -  Checking the ability to go to the sign-up page with the central ‘Email’ field",
               "fullTitle": "Go to Sign Up A7 -  Checking the ability to go to the sign-up page with the central ‘Email’ field",
               "timedOut": null,
-              "duration": 11104,
+              "duration": 32481,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -163,20 +105,20 @@
               "context": null,
               "code": "cy.visit('https://telnyx.com/');\ncy.acceptCookies();\ncy.fixture('const').then(data => {\n  mainPage.fillEmail(data.validEmail);\n});\nmainPage.clickTryForFreeBtn();\ncy.url().should('include', '/sign-up');",
               "err": {},
-              "uuid": "263f1661-75d3-4ac9-bce6-e4fb3750089e",
-              "parentUUID": "645cef1d-9d9c-499f-977d-1ec89b3b584b",
+              "uuid": "a9cf2ade-a600-4f12-8150-74cb857495bb",
+              "parentUUID": "8e61f656-35cc-450c-9660-a62efb5a64de",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "263f1661-75d3-4ac9-bce6-e4fb3750089e"
+            "a9cf2ade-a600-4f12-8150-74cb857495bb"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11104,
+          "duration": 32481,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -192,7 +134,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "2be8d11d-49c4-44bc-af1a-6b9cfbd89543",
+      "uuid": "45001b93-5e9e-47a1-ac19-d5ce587e1b17",
       "title": "",
       "fullFile": "cypress/e2e/tests/linkedIn.cy.js",
       "file": "cypress/e2e/tests/linkedIn.cy.js",
@@ -201,7 +143,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b3489dc5-9128-48da-b319-f63fb170a059",
+          "uuid": "23937444-13d1-44e4-8522-664a001dd208",
           "title": "Go to linkedIn",
           "fullFile": "",
           "file": "",
@@ -212,29 +154,29 @@
               "title": "A10 - Сhecking the functionality of the \"LinkedIn\" reference on the main page",
               "fullTitle": "Go to linkedIn A10 - Сhecking the functionality of the \"LinkedIn\" reference on the main page",
               "timedOut": null,
-              "duration": 9437,
+              "duration": 11926,
               "state": "passed",
-              "speed": "medium",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit('https://telnyx.com/');\ncy.acceptCookies();\nmainPage.clickLinkedInBtn();\ncy.url().should('include', 'linkedin');",
               "err": {},
-              "uuid": "545967e2-61f9-4e15-b39f-72774a5ef5dc",
-              "parentUUID": "b3489dc5-9128-48da-b319-f63fb170a059",
+              "uuid": "f4f3bc4f-534c-4f8d-b997-f6b5834167a0",
+              "parentUUID": "23937444-13d1-44e4-8522-664a001dd208",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "545967e2-61f9-4e15-b39f-72774a5ef5dc"
+            "f4f3bc4f-534c-4f8d-b997-f6b5834167a0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9437,
+          "duration": 11926,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -250,7 +192,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "d4d1c387-deec-4f1e-bf03-e5d543c5b6c8",
+      "uuid": "c83998f9-0a83-46c3-a54c-c36bf6d2c37b",
       "title": "",
       "fullFile": "cypress/e2e/tests/login.cy.js",
       "file": "cypress/e2e/tests/login.cy.js",
@@ -259,7 +201,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8cd0cd41-8911-4683-bb42-0b18d6fbe667",
+          "uuid": "b8490f42-b6a8-4ff6-afa3-93d52b7d503b",
           "title": "Log In",
           "fullFile": "",
           "file": "",
@@ -270,7 +212,7 @@
               "title": "A3 - Checking the sign in of an existing user with not confirmed email",
               "fullTitle": "Log In A3 - Checking the sign in of an existing user with not confirmed email",
               "timedOut": null,
-              "duration": 25260,
+              "duration": 56314,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -279,8 +221,8 @@
               "context": null,
               "code": "loginPage.clickLogin();\ncy.fixture('const').then(data => {\n  loginPage.fillBusinessEmail(data.validEmail);\n  loginPage.fillPassword(data.password);\n});\nloginPage.submitLogin();\nloginPage.checkNotConfirmedEmailError();",
               "err": {},
-              "uuid": "82d9440b-f50d-4363-b154-9bf57f8cd1bd",
-              "parentUUID": "8cd0cd41-8911-4683-bb42-0b18d6fbe667",
+              "uuid": "472d028b-4cfd-4d3b-84da-0c47cd264cf6",
+              "parentUUID": "b8490f42-b6a8-4ff6-afa3-93d52b7d503b",
               "isHook": false,
               "skipped": false
             },
@@ -288,7 +230,7 @@
               "title": "A4 - Checking the sign in of an not existing user",
               "fullTitle": "Log In A4 - Checking the sign in of an not existing user",
               "timedOut": null,
-              "duration": 24160,
+              "duration": 51698,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -297,21 +239,21 @@
               "context": null,
               "code": "loginPage.clickLogin();\ncy.fixture('const').then(data => {\n  loginPage.fillBusinessEmail(data.invalidEmail);\n  loginPage.fillPassword(data.password);\n});\nloginPage.submitLogin();\nloginPage.checkInvalidDataError();",
               "err": {},
-              "uuid": "73f5be34-9b6e-4385-9639-cda6de1ca4e6",
-              "parentUUID": "8cd0cd41-8911-4683-bb42-0b18d6fbe667",
+              "uuid": "875bb156-44c8-42f0-ad73-9ba326776828",
+              "parentUUID": "b8490f42-b6a8-4ff6-afa3-93d52b7d503b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "82d9440b-f50d-4363-b154-9bf57f8cd1bd",
-            "73f5be34-9b6e-4385-9639-cda6de1ca4e6"
+            "472d028b-4cfd-4d3b-84da-0c47cd264cf6",
+            "875bb156-44c8-42f0-ad73-9ba326776828"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 49420,
+          "duration": 108012,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -327,7 +269,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "948403c9-eeff-4c4a-8c6b-097051509088",
+      "uuid": "92ad9760-ff38-42d9-8310-f81618e93f9e",
       "title": "",
       "fullFile": "cypress/e2e/tests/menu.cy.js",
       "file": "cypress/e2e/tests/menu.cy.js",
@@ -336,7 +278,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "34c9a3c9-cc0b-4107-a671-0e5a3388783b",
+          "uuid": "518c4466-7bf3-48c2-88a3-7c5f1c028fae",
           "title": "Menu",
           "fullFile": "",
           "file": "",
@@ -347,29 +289,29 @@
               "title": "A8 - Checking that when you open the menu tab, categories 'Products', 'Solutions', 'Network', 'Resoucres', 'Company' and 'Pricing' are visible",
               "fullTitle": "Menu A8 - Checking that when you open the menu tab, categories 'Products', 'Solutions', 'Network', 'Resoucres', 'Company' and 'Pricing' are visible",
               "timedOut": null,
-              "duration": 4818,
+              "duration": 11120,
               "state": "passed",
-              "speed": "fast",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit('https://telnyx.com/');\ncy.acceptCookies();\nmainPage.openMenu();\nmainPage.checkMenuElementsIsVisible();",
               "err": {},
-              "uuid": "b157ba33-1910-4acf-8e2b-a2e95b80d841",
-              "parentUUID": "34c9a3c9-cc0b-4107-a671-0e5a3388783b",
+              "uuid": "e7db3377-2a1c-4059-8232-d3855816cbe4",
+              "parentUUID": "518c4466-7bf3-48c2-88a3-7c5f1c028fae",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b157ba33-1910-4acf-8e2b-a2e95b80d841"
+            "e7db3377-2a1c-4059-8232-d3855816cbe4"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4818,
+          "duration": 11120,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -385,7 +327,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "307a8d0a-52e2-412d-b792-5c741b5f2081",
+      "uuid": "7f4f5d2d-fc9a-4b40-86c8-a6a6ca386314",
       "title": "",
       "fullFile": "cypress/e2e/tests/passwordRecovery.cy.js",
       "file": "cypress/e2e/tests/passwordRecovery.cy.js",
@@ -394,7 +336,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0319b65c-07ed-4ec1-953f-7f20277c46c0",
+          "uuid": "46d3d13d-c2c8-4254-8707-cd963eff4638",
           "title": "Password Recovery",
           "fullFile": "",
           "file": "",
@@ -405,7 +347,7 @@
               "title": "A5 - Checking the ability to recover password",
               "fullTitle": "Password Recovery A5 - Checking the ability to recover password",
               "timedOut": null,
-              "duration": 22505,
+              "duration": 59115,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -414,20 +356,20 @@
               "context": null,
               "code": "cy.visit('https://telnyx.com/');\ncy.acceptCookies();\n_passwordRecovery.default.clickLogin();\n_passwordRecovery.default.clickForgotPasswordBtn();\ncy.fixture('const').then(data => {\n  _passwordRecovery.default.fillEmail(data.validEmail);\n});\n_passwordRecovery.default.clickResetPasswordBtn();\n_passwordRecovery.default.checkSuccessMessage();",
               "err": {},
-              "uuid": "b2dd8dcb-05ad-4a70-ba3d-0f3e2273e6ff",
-              "parentUUID": "0319b65c-07ed-4ec1-953f-7f20277c46c0",
+              "uuid": "238a56c6-1b5d-445d-83e1-0f6800136b46",
+              "parentUUID": "46d3d13d-c2c8-4254-8707-cd963eff4638",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b2dd8dcb-05ad-4a70-ba3d-0f3e2273e6ff"
+            "238a56c6-1b5d-445d-83e1-0f6800136b46"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 22505,
+          "duration": 59115,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -443,7 +385,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "db337f88-7f6d-47da-93d7-710a505d94b1",
+      "uuid": "9b6bc670-999a-4924-a373-41672c6a737b",
       "title": "",
       "fullFile": "cypress/e2e/tests/signUp.cy.js",
       "file": "cypress/e2e/tests/signUp.cy.js",
@@ -452,7 +394,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "52aeb279-cd92-41fe-8d99-f52ac201ada2",
+          "uuid": "48d94159-0d84-49a8-ace3-c6f6905c6c8c",
           "title": "Sign Up",
           "fullFile": "",
           "file": "",
@@ -463,7 +405,7 @@
               "title": "A1 - Checking that it is not possible to register a new user with invalid email",
               "fullTitle": "Sign Up A1 - Checking that it is not possible to register a new user with invalid email",
               "timedOut": null,
-              "duration": 18569,
+              "duration": 42461,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -472,8 +414,8 @@
               "context": null,
               "code": "_signUp.default.clickSignUp();\ncy.fixture('const').then(data => {\n  _signUp.default.fillWorkEmail(data.invalidEmail);\n  _signUp.default.fillFullName(data.fullName);\n  _signUp.default.fillPassword(data.password);\n});\n_signUp.default.checkAgreeCheckbox();\n_signUp.default.submitSignUp();\n_signUp.default.checkInvalidDataError();",
               "err": {},
-              "uuid": "87d5115a-50e8-4c40-8d5e-8b77bd8d71c4",
-              "parentUUID": "52aeb279-cd92-41fe-8d99-f52ac201ada2",
+              "uuid": "295a0fa5-498c-4618-bfcc-47ea66cee44c",
+              "parentUUID": "48d94159-0d84-49a8-ace3-c6f6905c6c8c",
               "isHook": false,
               "skipped": false
             },
@@ -481,7 +423,7 @@
               "title": "A2 - Checking that it is not possible to register a new user with valid but not business email",
               "fullTitle": "Sign Up A2 - Checking that it is not possible to register a new user with valid but not business email",
               "timedOut": null,
-              "duration": 19215,
+              "duration": 33642,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -490,21 +432,21 @@
               "context": null,
               "code": "_signUp.default.clickSignUp();\ncy.fixture('const').then(data => {\n  _signUp.default.fillWorkEmail(data.notBusinessEmai);\n  _signUp.default.fillFullName(data.fullName);\n  _signUp.default.fillPassword(data.password);\n});\n_signUp.default.checkAgreeCheckbox();\n_signUp.default.submitSignUp();\n_signUp.default.checkNotBusinessEmailError();",
               "err": {},
-              "uuid": "cb2047fe-e97a-4546-bcc9-9dba7ae38552",
-              "parentUUID": "52aeb279-cd92-41fe-8d99-f52ac201ada2",
+              "uuid": "0bd591cb-736f-40b1-818b-eed25af93037",
+              "parentUUID": "48d94159-0d84-49a8-ace3-c6f6905c6c8c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "87d5115a-50e8-4c40-8d5e-8b77bd8d71c4",
-            "cb2047fe-e97a-4546-bcc9-9dba7ae38552"
+            "295a0fa5-498c-4618-bfcc-47ea66cee44c",
+            "0bd591cb-736f-40b1-818b-eed25af93037"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 37784,
+          "duration": 76103,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -520,7 +462,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "fddf628c-99c9-4a50-b379-7da90720aff3",
+      "uuid": "f96fbb6b-e57a-4f2c-a34a-2841e7f92c41",
       "title": "",
       "fullFile": "cypress/e2e/tests/supportCenter.cy.js",
       "file": "cypress/e2e/tests/supportCenter.cy.js",
@@ -529,7 +471,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "102a4610-2c7d-4b1f-af59-14b8ee222cfb",
+          "uuid": "06a25212-b436-4df1-ad79-7379bbc4196f",
           "title": "Use a support Center",
           "fullFile": "",
           "file": "",
@@ -540,29 +482,29 @@
               "title": "A6 - Checking the ability to use a support center",
               "fullTitle": "Use a support Center A6 - Checking the ability to use a support center",
               "timedOut": null,
-              "duration": 9039,
+              "duration": 23296,
               "state": "passed",
-              "speed": "medium",
+              "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "_supportCenter.default.clickSupportCenterBtn();\ncy.fixture('const').then(data => {\n  _supportCenter.default.fillSearchField(data.text);\n  _supportCenter.default.openArticle();\n  _supportCenter.default.checkArticleTitle(data.text);\n});",
               "err": {},
-              "uuid": "72432e8e-f4bc-41e4-b10f-1ba69440957b",
-              "parentUUID": "102a4610-2c7d-4b1f-af59-14b8ee222cfb",
+              "uuid": "b1c3069a-b12c-49e1-914d-92d09ef73020",
+              "parentUUID": "06a25212-b436-4df1-ad79-7379bbc4196f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "72432e8e-f4bc-41e4-b10f-1ba69440957b"
+            "b1c3069a-b12c-49e1-914d-92d09ef73020"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 9039,
+          "duration": 23296,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -598,7 +540,7 @@
       "options": {
         "id": "default",
         "reportDir": "cypress/results/json",
-        "overwrite": true,
+        "overwrite": false,
         "html": false,
         "json": true
       },

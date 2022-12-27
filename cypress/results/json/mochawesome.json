@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-12-23T23:23:26.946Z",
-    "end": "2022-12-23T23:23:42.533Z",
-    "duration": 15587,
+    "start": "2022-12-27T13:33:38.343Z",
+    "end": "2022-12-27T13:34:10.133Z",
+    "duration": 31790,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "c878b010-eb49-47e9-9a7d-f4ad91535eff",
+      "uuid": "410f1092-ff54-48de-a329-e843665ad523",
       "title": "",
-      "fullFile": "cypress/e2e/tests/supportCenter.cy.js",
-      "file": "cypress/e2e/tests/supportCenter.cy.js",
+      "fullFile": "cypress/e2e/tests/goToMain.cy.js",
+      "file": "cypress/e2e/tests/goToMain.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "86cb8794-a760-44a0-8d9f-50a7dec8b277",
-          "title": "Use a support Center",
+          "uuid": "66706806-a253-47b0-a80b-8e5ae68bb15b",
+          "title": "Go to main page",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "A6 - Checking the ability to use a support center",
-              "fullTitle": "Use a support Center A6 - Checking the ability to use a support center",
+              "title": "A9 - Checking the ability to return to the main page by clicking on site logo",
+              "fullTitle": "Go to main page A9 - Checking the ability to return to the main page by clicking on site logo",
               "timedOut": null,
-              "duration": 11513,
+              "duration": 24345,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "_supportCenter.default.clickSupportCenterBtn();\ncy.fixture('const').then(data => {\n  _supportCenter.default.fillSearchField(data.text);\n  _supportCenter.default.openArticle();\n  _supportCenter.default.checkArticleTitle(data.text);\n});",
+              "code": "cy.visit('https://telnyx.com/');\ncy.acceptCookies();\n_signUp.default.clickSignUp();\n_signUp.default.clickSiteLogo();\ncy.url().should('be.equal', 'https://telnyx.com/');",
               "err": {},
-              "uuid": "b8348fb3-0644-4dc2-bb20-6d9dc5ef30ea",
-              "parentUUID": "86cb8794-a760-44a0-8d9f-50a7dec8b277",
+              "uuid": "ef4c9ed7-55f1-4947-8efd-1ac9c6511906",
+              "parentUUID": "66706806-a253-47b0-a80b-8e5ae68bb15b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b8348fb3-0644-4dc2-bb20-6d9dc5ef30ea"
+            "ef4c9ed7-55f1-4947-8efd-1ac9c6511906"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11513,
+          "duration": 24345,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -96,7 +96,7 @@
       "options": {
         "id": "default",
         "reportDir": "cypress/results/json",
-        "overwrite": true,
+        "overwrite": false,
         "html": false,
         "json": true
       },

@@ -22,12 +22,16 @@ export default class LoginPage extends MainPage {
         this.submitBtn().click()
     }
     checkNotConfirmedEmailError(){
-        this.errorMessage().should('be.visible')
-        .and('contain', 'You must confirm your email before you can sign in')
+        cy.fixture('const').then((data) => {
+            this.errorMessage().should('be.visible')
+            .and('contain', data.errorConfirmEmail)
+        })
     }
     checkInvalidDataError(){
-        this.errorMessage().should('be.visible')
-        .and('contain', 'That email and password combination is not valid')
+        cy.fixture('const').then((data) => {
+            this.errorMessage().should('be.visible')
+            .and('contain', data.errorInvalidLogin)
+        })
     } 
     clickForgotPasswordBtn() {
         this.forgotPasswordBtn().click()
