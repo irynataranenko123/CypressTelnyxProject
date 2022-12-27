@@ -8,8 +8,8 @@ module.exports = defineConfig({
   },
 
   chromeWebSecurity: false,
-  defaultCommandTimeout: 5000,
-  pageLoadTimeout: 30000,
+  //defaultCommandTimeout: 5000,
+  //pageLoadTimeout: 30000,
   retries	: { "runMode": 3, "openMode": 3 },
   //video: false,
   e2e: {
