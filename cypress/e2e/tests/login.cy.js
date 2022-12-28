@@ -16,7 +16,8 @@ describe('Log In', () => {
             loginPage.fillPassword(data.password)
         })
         loginPage.submitLogin()
-        loginPage.checkNotConfirmedEmailError()
+        //loginPage.checkNotConfirmedEmailError()
+        cy.contains('That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.').should('be.visible')
     })
 
     it('A4 - Checking the sign in of an not existing user', () => {
@@ -26,7 +27,7 @@ describe('Log In', () => {
             loginPage.fillPassword(data.password)
         })
         loginPage.submitLogin()
-        //loginPage.checkInvalidDataError()
-        cy.contains('That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.').should('be.visible')
+        loginPage.checkInvalidDataError()
+
     })
 })
