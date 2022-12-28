@@ -16,7 +16,8 @@ describe('Sign Up', () => {
         })
         signUpPage.checkAgreeCheckbox()
         signUpPage.submitSignUp()
-        signUpPage.checkInvalidDataError()
+        //signUpPage.checkInvalidDataError()
+        cy.contains('That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.').should('be.visible')
     })
 
     it('A2 - Checking that it is not possible to register a new user with valid but not business email', () => {
@@ -28,7 +29,8 @@ describe('Sign Up', () => {
         })
         signUpPage.checkAgreeCheckbox()
         signUpPage.submitSignUp()
-        signUpPage.checkNotBusinessEmailError()
+        //signUpPage.checkNotBusinessEmailError()
+        cy.contains('That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.').should('be.visible')
     })
 
 })
