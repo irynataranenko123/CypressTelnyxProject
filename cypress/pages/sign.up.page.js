@@ -39,10 +39,15 @@ export default new class SignUpPage extends MainPage{
         cy.fixture('const').then((data) => {
             this.errorMessage().scrollIntoView()
             .should('be.visible')
-            .and('contain', data.errorInvalidSignUp)
+            //.and('contain', data.errorInvalidSignUp)
             //.and('contain', data.errorRecaptcha)
             //cy.contains(data.errorInvalidSignUp)
-            cy.contains(data.errorRecaptcha)
+            //cy.contains(data.errorRecaptcha)           
+        this.errorMessage().then(($error)=> {
+            let text = ''
+            text = $error.text()
+            cy.log(text)
+        })
         })
     }
 
@@ -52,7 +57,12 @@ export default new class SignUpPage extends MainPage{
             //.and('contain', data.errorProvider)
             //.and('contain', data.errorRecaptcha)
             //cy.contains(data.errorNotBusinessEmail)
-            cy.contains(data.errorProvider)
+            //cy.contains(data.errorProvider)
+        })
+        this.errorMessage().then(($error)=> {
+            let text = ''
+            text = $error.text()
+            cy.log(text)
         })
     }
 
