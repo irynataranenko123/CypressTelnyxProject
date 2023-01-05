@@ -10,7 +10,7 @@ export default new class SignUpPage extends MainPage{
         this.inputPassword = () => {return cy.get('#password')},
         this.agreeCheckbox = () => {return cy.get('.sc-26f7330-5 > .sc-e117dd75-0')},
         this.submitBtn = () => {return cy.get('[type="submit"]')},
-        this.errorMessage = () => {return cy.get('.sc-570b157-1')}
+        this.errorMessage = () => {return cy.get('#signup-form_error')}
         this.siteLogo = () => {return cy.get('[href="/"]')}
        
     }
