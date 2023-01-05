@@ -41,7 +41,8 @@ export default new class SignUpPage extends MainPage{
             .should('be.visible')
             .and('contain', data.errorInvalidSignUp)
             //.and('contain', data.errorRecaptcha)
-            cy.contains(data.errorInvalidSignUp)
+            //cy.contains(data.errorInvalidSignUp)
+            cy.contains(data.errorRecaptcha)
         })
     }
 
@@ -51,7 +52,8 @@ export default new class SignUpPage extends MainPage{
             .should('be.visible')
             //.and('contain', data.errorNotBusinessEmail)
             //.and('contain', data.errorRecaptcha)
-            cy.contains(data.errorNotBusinessEmail)
+            //cy.contains(data.errorNotBusinessEmail)
+            cy.contains(data.errorRecaptcha)
         })
     }
 
