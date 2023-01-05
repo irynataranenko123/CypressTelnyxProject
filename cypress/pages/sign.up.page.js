@@ -38,14 +38,16 @@ export default new class SignUpPage extends MainPage{
 
     checkInvalidDataError(){
         cy.fixture('const').then((data) => {
-            this.errorMessage().should('be.visible')
+            this.errorMessage().scrollIntoView()
+            .should('be.visible')
             .and('contain', data.errorInvalidSignUp)
         })
     }
 
     checkNotBusinessEmailError(){
         cy.fixture('const').then((data) => {
-            this.errorMessage().should('be.visible')
+            this.errorMessage().scrollIntoView()
+            .should('be.visible')
             .and('contain', data.errorNotBusinessEmail)
         })
     }

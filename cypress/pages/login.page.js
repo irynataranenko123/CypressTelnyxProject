@@ -23,7 +23,8 @@ export default class LoginPage extends MainPage {
     }
     checkNotConfirmedEmailError(){
         cy.fixture('const').then((data) => {
-            this.errorMessage().should('be.visible')
+            this.errorMessage().scrollIntoView()
+            .should('be.visible')
             .and('contain', data.errorConfirmEmail)
         })
     }

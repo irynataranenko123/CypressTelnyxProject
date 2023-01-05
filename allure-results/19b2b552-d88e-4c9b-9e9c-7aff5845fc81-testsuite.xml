@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672922018379' stop='1672922048886'>
+    <name>Use a support Center</name>
+    <title>Use a support Center</title>
+    <test-cases>
+        <test-case start='1672922018382' status='passed' stop='1672922048127'>
+            <name>A6 - Checking the ability to use a support center</name>
+            <title>A6 - Checking the ability to use a support center</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

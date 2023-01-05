@@ -1,5 +1,5 @@
 {
-    "reporterEnabled": "mochawesome",
+    "reporterEnabled": "mocha-allure-reporter",
     "mochawesomeReporterOptions": {
         "reportDir": "cypress/results/json",
         "overwrite": false,

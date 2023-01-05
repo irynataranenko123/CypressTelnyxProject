@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672921525592' stop='1672921594815'>
+    <name>Password Recovery</name>
+    <title>Password Recovery</title>
+    <test-cases>
+        <test-case start='1672921525592' status='passed' stop='1672921594329'>
+            <name>A5 - Checking the ability to recover password</name>
+            <title>A5 - Checking the ability to recover password</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

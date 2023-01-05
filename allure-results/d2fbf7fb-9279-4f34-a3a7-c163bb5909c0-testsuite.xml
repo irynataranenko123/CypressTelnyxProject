@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672921219692' stop='1672921327848'>
+    <name>Log In</name>
+    <title>Log In</title>
+    <test-cases>
+        <test-case start='1672921219692' status='passed' stop='1672921276576'>
+            <name>A3 - Checking the sign in of an existing user with not confirmed email</name>
+            <title>A3 - Checking the sign in of an existing user with not confirmed email</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1672921277121' status='passed' stop='1672921327285'>
+            <name>A4 - Checking the sign in of an not existing user</name>
+            <title>A4 - Checking the sign in of an not existing user</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

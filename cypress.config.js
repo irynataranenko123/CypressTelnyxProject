@@ -8,14 +8,15 @@ module.exports = defineConfig({
   },
 
   chromeWebSecurity: false,
-  //defaultCommandTimeout: 5000,
-  //pageLoadTimeout: 30000,
-  retries	: { "runMode": 3, "openMode": 3 },
+  //defaultCommandTimeout: 10000,
+  //pageLoadTimeout: 60000,
+  retries	: { "runMode": 2, "openMode": 2 },
+  screenshot: 'on',
   //video: false,
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      
+
     },
   },
 });
