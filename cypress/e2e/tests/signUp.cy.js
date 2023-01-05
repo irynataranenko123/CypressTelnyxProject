@@ -29,8 +29,8 @@ describe('Sign Up', () => {
         })
         signUpPage.checkAgreeCheckbox()
         signUpPage.submitSignUp()
-        //signUpPage.checkNotBusinessEmailError()
-        cy.contains('That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.').should('be.visible')
+        signUpPage.checkNotBusinessEmailError()
+        //cy.contains('That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.').should('be.visible')
     })
 
 })

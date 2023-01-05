@@ -16,7 +16,7 @@ describe('Log In', () => {
             loginPage.fillPassword(data.password)
         })
         loginPage.submitLogin()
-        //loginPage.checkNotConfirmedEmailError()
+        loginPage.checkNotConfirmedEmailError()
         cy.contains('That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.').should('be.visible')
     })
 

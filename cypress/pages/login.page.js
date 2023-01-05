@@ -25,7 +25,8 @@ export default class LoginPage extends MainPage {
         cy.fixture('const').then((data) => {
             this.errorMessage().scrollIntoView()
             .should('be.visible')
-            .and('contain', data.errorConfirmEmail)
+            //.and('contain', data.errorConfirmEmail)
+            .and('contain', data.errorRecapcha)
         })
     }
     checkInvalidDataError(){

@@ -9,6 +9,7 @@
   "errorConfirmEmail": "You must confirm your email before you can sign in",
   "errorInvalidLogin": "That email and password combination is not valid",
   "errorInvalidSignUp": "One or more fields are not valid",
-  "errorNotBusinessEmail": "We were unable to create a new account with this email"
+  "errorNotBusinessEmail": "We were unable to create a new account with this email",
+  "errorRecaptcha": "That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again."
 }
 

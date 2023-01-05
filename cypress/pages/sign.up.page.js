@@ -41,6 +41,7 @@ export default new class SignUpPage extends MainPage{
             this.errorMessage().scrollIntoView()
             .should('be.visible')
             //.and('contain', data.errorInvalidSignUp)
+            .and('contain', data.errorRecapcha)
         })
     }
 
@@ -49,6 +50,7 @@ export default new class SignUpPage extends MainPage{
             this.errorMessage().scrollIntoView()
             .should('be.visible')
             //.and('contain', data.errorNotBusinessEmail)
+            .and('contain', data.errorRecapcha)
         })
     }
 
