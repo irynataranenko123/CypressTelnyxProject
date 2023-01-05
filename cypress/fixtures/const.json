@@ -10,8 +10,10 @@
   "errorInvalidLogin": "That email and password combination is not valid",
   "errorInvalidSignUp": "One or more fields are not valid. Please update these fields and try again.",
   "errorNotBusinessEmail": "You cannot register using an email from this provider",
-  "errorRecaptcha": "That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again."
+  "errorRecaptcha": "That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.",
+  "errorProvider": "You cannot register using an email from this provider"
 }
+
 
 
 
