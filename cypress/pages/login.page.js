@@ -26,7 +26,7 @@ export default class LoginPage extends MainPage {
             this.errorMessage().scrollIntoView()
             .should('be.visible')
             //.and('contain', data.errorConfirmEmail)
-            .and('contain', data.errorRecapcha)
+            .and('contain', data.errorRecaptcha)
         })
     }
     checkInvalidDataError(){
