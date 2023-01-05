@@ -1,41 +1,39 @@
-name: Cypress Tests using Cypress Docker Image with allure-report
+
+name: Create a report
 
 on:
-    push:
-        branches: [main]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-    Run_test:
-        runs-on: ubuntu-latest
-        strategy:
-            matrix:
-                node-version: [16.x]
+  build:
 
-        steps:
-            - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v2
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: "npm"
-            - run: npm i npm@latest
-            - run: npm i
-            - name: run test
-              run: npx cypress run
-            - name: Create Report
-              if: always()
-              run: npm run allure:generate
-            - name: Upload artifact allure-report
-              uses: actions/upload-artifact@v1
-              if: always()
-              with:
-                  name: allure-report
-                  path: ./allure-report
-            - name: Deploy report
-              uses: JamesIves/github-pages-deploy-action@3.1.0
-              if: always()
-              with:
-                  ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
-                  BRANCH: main # The branch the action should deploy to.
-                  FOLDER: allure-report # The folder the action should deploy.
-                  TARGET_FOLDER: docs
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      continue-on-error: true
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm install @badeball/cypress-cucumber-preprocessor
+    - run: npm run build --if-present
+    - run: npm run test
+    - run: npm run allure:open
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+
