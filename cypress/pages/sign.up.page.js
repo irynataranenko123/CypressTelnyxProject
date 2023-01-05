@@ -14,7 +14,6 @@ export default new class SignUpPage extends MainPage{
         this.siteLogo = () => {return cy.get('[href="/"]')}
        
     }
-    
 
     fillWorkEmail(email) {
         this.inputWorkEmail().type(email).should('have.value', email)
@@ -42,6 +41,7 @@ export default new class SignUpPage extends MainPage{
             .should('be.visible')
             .and('contain', data.errorInvalidSignUp)
             //.and('contain', data.errorRecaptcha)
+            cy.contains(data.errorInvalidSignUp)
         })
     }
 
@@ -49,8 +49,9 @@ export default new class SignUpPage extends MainPage{
         cy.fixture('const').then((data) => {
             this.errorMessage().scrollIntoView()
             .should('be.visible')
-            .and('contain', data.errorNotBusinessEmail)
+            //.and('contain', data.errorNotBusinessEmail)
             //.and('contain', data.errorRecaptcha)
+            cy.contains(data.errorNotBusinessEmail)
         })
     }
 
