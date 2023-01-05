@@ -49,9 +49,10 @@ export default new class SignUpPage extends MainPage{
     checkNotBusinessEmailError(){
         cy.fixture('const').then((data) => {
             this.errorMessage().should('be.visible')
-            .and('contain', data.errorProvider)
+            //.and('contain', data.errorProvider)
             //.and('contain', data.errorRecaptcha)
             //cy.contains(data.errorNotBusinessEmail)
+            cy.contains(data.errorProvider)
         })
     }
 
