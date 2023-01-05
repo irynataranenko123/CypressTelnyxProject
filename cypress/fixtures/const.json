@@ -8,8 +8,10 @@
   "text": "Telnyx",
   "errorConfirmEmail": "You must confirm your email before you can sign in",
   "errorInvalidLogin": "That email and password combination is not valid",
-  "errorInvalidSignUp": "One or more fields are not valid",
-  "errorNotBusinessEmail": "We were unable to create a new account with this email",
+  "errorInvalidSignUp": "One or more fields are not valid. Please update these fields and try again.",
+  "errorNotBusinessEmail": "We were unable to create a new account with this email. Please email support@telnyx.com for help with creating an account. (Error RSR)",
   "errorRecaptcha": "That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again."
 }
+
+
 
