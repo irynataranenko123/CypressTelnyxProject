@@ -24,21 +24,22 @@ concurrency:
 jobs:
   # Build job
   Run_test:
-    runs-on: ubuntu-latest
-    strategy:
-        matrix:
-            node-version: [16.x]
-    steps:
-       - uses: actions/checkout@v2
-       - name: Use Node.js ${{ matrix.node-version }}
-         uses: actions/setup-node@v2
-         with:
-              node-version: ${{ matrix.node-version }}
-              cache: "npm"
-       - run: npm i npm@latest
-       - run: npm i
-       - name: run test
-         run: npm run test     
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [16.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "npm"
+            - run: npm i npm@latest
+            - run: npm i
+            - name: run test
+              run: npx cypress run   
        
   build:
     runs-on: ubuntu-latest
