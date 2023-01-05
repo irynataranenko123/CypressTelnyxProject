@@ -38,7 +38,7 @@ jobs:
        - run: npm i npm@latest
        - run: npm i
        - name: run test
-         run: npx run test     
+         run: npm run test     
        
   build:
     runs-on: ubuntu-latest
