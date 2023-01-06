@@ -1,4 +1,4 @@
 .DS_Store
- node_modules
- allure-results
+node_modules
+allure-results
 allure-report
