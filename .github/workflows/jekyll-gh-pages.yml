@@ -45,7 +45,8 @@ jobs:
     - run: |
         rm -R docs
         mkdir docs
-        cp -r allure-report/* docs/*
+        cp -r allure-report/* docs
+        mkdir allure-report
     
     - name: Checkout
       uses: actions/checkout@v3
