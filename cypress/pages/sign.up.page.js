@@ -37,25 +37,45 @@ export default new class SignUpPage extends MainPage{
 
     checkInvalidDataError(){
         cy.fixture('const').then((data) => {
+            if (cy.contains(data.errorRecaptchaSignUp)) {   
+                this.errorMessage().should('be.visible')
+                .and('contain', data.errorRecaptchaSignUp)
+            }
+            else {
+                this.errorMessage().should('be.visible')
+                .and('contain', data.errorInvalidSignUp)
+            }
+        })
+    }   
+        /*cy.fixture('const').then((data) => {
             this.errorMessage().scrollIntoView()
             .should('be.visible')
             //.and('contain', data.errorInvalidSignUp)
             .and('contain', data.errorRecaptchaSignUp)
          
-        })
-       
-    }
+        })*/
+    
 
     checkNotBusinessEmailError(){
         cy.fixture('const').then((data) => {
+            if (cy.contains(data.errorRecaptchaSignUp)) {   
+                this.errorMessage().should('be.visible')
+                .and('contain', data.errorRecaptchaSignUp)
+            }
+            else {
+                this.errorMessage().should('be.visible')
+                .and('contain', data.errorNotBusinessEmail)
+            }
+        })
+    }
+        /*cy.fixture('const').then((data) => {
             this.errorMessage().should('be.visible')
             //.and('contain', data.errorNotBusinessEmail)
             .and('contain', data.errorRecaptchaSignUp)
             
 
-        })
+        })*/
      
-    }
 
     clickSiteLogo () {
         this.siteLogo().click()
