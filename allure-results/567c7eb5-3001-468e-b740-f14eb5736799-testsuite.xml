@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672921008776' stop='1672921044582'>
+    <name>Go to Sign Up</name>
+    <title>Go to Sign Up</title>
+    <test-cases>
+        <test-case start='1672921008776' status='passed' stop='1672921043548'>
+            <name>A7 -  Checking the ability to go to the sign-up page with the central ‘Email’ field</name>
+            <title>A7 -  Checking the ability to go to the sign-up page with the central ‘Email’ field</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

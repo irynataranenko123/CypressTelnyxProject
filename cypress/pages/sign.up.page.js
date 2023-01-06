@@ -40,30 +40,21 @@ export default new class SignUpPage extends MainPage{
             this.errorMessage().scrollIntoView()
             .should('be.visible')
             //.and('contain', data.errorInvalidSignUp)
-            //.and('contain', data.errorRecaptcha)
-            //cy.contains(data.errorInvalidSignUp)
-            //cy.contains(data.errorRecaptcha)           
-        this.errorMessage().then(($error)=> {
-            let text = ''
-            text = $error.text()
-            cy.log(text)
+            .and('contain', data.errorRecaptchaSignUp)
+         
         })
-        })
+       
     }
 
     checkNotBusinessEmailError(){
         cy.fixture('const').then((data) => {
             this.errorMessage().should('be.visible')
-            //.and('contain', data.errorProvider)
-            //.and('contain', data.errorRecaptcha)
-            //cy.contains(data.errorNotBusinessEmail)
-            //cy.contains(data.errorProvider)
+            //.and('contain', data.errorNotBusinessEmail)
+            .and('contain', data.errorRecaptchaSignUp)
+            
+
         })
-        this.errorMessage().then(($error)=> {
-            let text = ''
-            text = $error.text()
-            cy.log(text)
-        })
+     
     }
 
     clickSiteLogo () {

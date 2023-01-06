@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672921128970' stop='1672921147864'>
+    <name>Go to linkedIn</name>
+    <title>Go to linkedIn</title>
+    <test-cases>
+        <test-case start='1672921128971' status='passed' stop='1672921147561'>
+            <name>A10 - Сhecking the functionality of the "LinkedIn" reference on the main page</name>
+            <title>A10 - Сhecking the functionality of the "LinkedIn" reference on the main page</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

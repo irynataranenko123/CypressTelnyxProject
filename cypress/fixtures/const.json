@@ -3,7 +3,7 @@
   "password":"Qwerty123456))",
   "fullName": "Full Name",
   "validEmail":"zukor3@gmail.com",
-  "notBusinessEmai":"zukor@maisfl.ru",
+  "notBusinessEmai":"zukor@mail.ru",
   "invalidEmail":"rgmegaeeg@gmail.com",
   "text": "Telnyx",
   "errorConfirmEmail": "You must confirm your email before you can sign in",
@@ -11,7 +11,7 @@
   "errorInvalidSignUp": "One or more fields are not valid. Please update these fields and try again.",
   "errorNotBusinessEmail": "You cannot register using an email from this provider",
   "errorRecaptcha": "That email and password combination is not valid, or your browser could not be authenticated via recaptcha. Please try again.",
-  "errorProvider": "You cannot register using an email from this provider"
+  "errorRecaptchaSignUp": "reCAPTCHA validation required"
 }
 
 
