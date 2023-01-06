@@ -43,9 +43,9 @@ jobs:
     - run: npm run build --if-present
     - run: npm run test
     - run: |
-      rm -R docs
-      mkdir docs
-      cp -r allure-report/* docs/*
+        rm -R docs
+        mkdir docs
+        cp -r allure-report/* docs/*
     
     - name: Checkout
       uses: actions/checkout@v3
