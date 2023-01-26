@@ -1,6 +1,5 @@
 import './commands'
 import addContext from 'mochawesome/addContext'
-import '@shelex/cypress-allure-plugin';
 
 Cypress.on("test:after:run", (test, runnable) => {
     

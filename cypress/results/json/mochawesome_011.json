@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-26T16:00:20.599Z",
+    "end": "2023-01-26T16:02:02.669Z",
+    "duration": 102070,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1db5c289-90e1-4063-bb9c-96d7dbf58ece",
+      "title": "",
+      "fullFile": "cypress/e2e/tests/login.cy.js",
+      "file": "cypress/e2e/tests/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a545234-78ae-4871-8c5e-a6fa423042b9",
+          "title": "Log In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A3 - Checking the sign in of an existing user with not confirmed email",
+              "fullTitle": "Log In A3 - Checking the sign in of an existing user with not confirmed email",
+              "timedOut": null,
+              "duration": 47109,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.clickLogin();\ncy.fixture('const').then(data => {\n  loginPage.fillBusinessEmail(data.validEmail);\n  loginPage.fillPassword(data.password);\n});\nloginPage.submitLogin();\nloginPage.checkNotConfirmedEmailError();",
+              "err": {},
+              "uuid": "b5a261d3-98d0-465d-bfbf-c18d40021e91",
+              "parentUUID": "5a545234-78ae-4871-8c5e-a6fa423042b9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A4 - Checking the sign in of an not existing user",
+              "fullTitle": "Log In A4 - Checking the sign in of an not existing user",
+              "timedOut": null,
+              "duration": 47104,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.clickLogin();\ncy.fixture('const').then(data => {\n  loginPage.fillBusinessEmail(data.invalidEmail);\n  loginPage.fillPassword(data.password);\n});\nloginPage.submitLogin();\nloginPage.checkInvalidDataError();",
+              "err": {},
+              "uuid": "1bc8c250-d2fa-4672-847c-8b0588e00bc7",
+              "parentUUID": "5a545234-78ae-4871-8c5e-a6fa423042b9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b5a261d3-98d0-465d-bfbf-c18d40021e91",
+            "1bc8c250-d2fa-4672-847c-8b0588e00bc7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 94213,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
