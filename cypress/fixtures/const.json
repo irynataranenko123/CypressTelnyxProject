@@ -6,7 +6,7 @@
   "notBusinessEmai":"zukor@mail.ru",
   "invalidEmail":"rgmegaeeg@gmail.com",
   "text": "Telnyx",
-  "errorConfirmEmail": "You must confirm your email before you can sign in",
+  "errorConfirmEmail": "You must confirm your email before you can sign in. Please contact support if you are unable to do this.",
   "errorInvalidLogin": "That email and password combination is not valid",
   "errorInvalidSignUp": "One or more fields are not valid. Please update these fields and try again.",
   "errorNotBusinessEmail": "You cannot register using an email from this provider",

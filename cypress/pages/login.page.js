@@ -23,14 +23,17 @@ export default class LoginPage extends MainPage {
     }
     checkNotConfirmedEmailError(){
         cy.fixture('const').then((data) => {
-            if (cy.contains(data.errorRecaptcha)) {   
-                this.errorMessage().should('be.visible')
-                .and('contain', data.errorRecaptcha)
-            }
-            else {
-                this.errorMessage().should('be.visible')
-                .and('contain', data.errorConfirmEmail)
-            }
+            this.errorMessage().then(($span)=> {
+                if ($span.text() == data.errorConfirmEmail){ 
+                    cy.log($span.text())
+                    this.errorMessage().should('be.visible')
+                    .and('contain', data.errorConfirmEmail)
+                } else {
+                    cy.log($span.text())
+                    this.errorMessage().should('be.visible')
+                    .and('contain', data.errorInvalidLogin)
+                }
+            })
         })
         
         /*cy.fixture('const').then((data) => {

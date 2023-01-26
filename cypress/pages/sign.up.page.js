@@ -11,8 +11,9 @@ export default new class SignUpPage extends MainPage{
         this.agreeCheckbox = () => {return cy.get('.sc-26f7330-5 > .sc-e117dd75-0')},
         this.submitBtn = () => {return cy.get('[type="submit"]')},
         this.errorMessage = () => {return cy.get('#signup-form_error')}
-        this.siteLogo = () => {return cy.get('[href="/"]')}
-       
+        this.siteLogo = () => {return cy.get('[href="/"]')},
+        this.recaptchaError= () => {return cy.get('[data-top="1099.6796875"]')}
+
     }
 
     fillWorkEmail(email) {
@@ -37,45 +38,44 @@ export default new class SignUpPage extends MainPage{
 
     checkInvalidDataError(){
         cy.fixture('const').then((data) => {
-            if (cy.contains(data.errorRecaptchaSignUp)) {   
-                this.errorMessage().should('be.visible')
-                .and('contain', data.errorRecaptchaSignUp)
-            }
-            else {
-                this.errorMessage().should('be.visible')
-                .and('contain', data.errorInvalidSignUp)
-            }
-        })
-    }   
-        /*cy.fixture('const').then((data) => {
-            this.errorMessage().scrollIntoView()
-            .should('be.visible')
-            //.and('contain', data.errorInvalidSignUp)
-            .and('contain', data.errorRecaptchaSignUp)
-         
-        })*/
-    
+            this.errorMessage().then(($span)=> {
+                if ($span.text() == data.errorInvalidSignUp){ 
+                    this.errorMessage().should('be.visible')
+                    .and('contain', data.errorInvalidSignUp)
+                } else if ($span.attr('text') != data.errorInvalidSignUp){
+                    this.errorMessage().should('be.visible')
+                    .and('contain', data.errorRecaptchaSignUp)
+                }  
+            })
+        })   
+    }
 
     checkNotBusinessEmailError(){
         cy.fixture('const').then((data) => {
-            if (cy.contains(data.errorRecaptchaSignUp)) {   
-                this.errorMessage().should('be.visible')
-                .and('contain', data.errorRecaptchaSignUp)
-            }
-            else {
-                this.errorMessage().should('be.visible')
-                .and('contain', data.errorNotBusinessEmail)
-            }
-        })
+            this.errorMessage().then(($span)=> {
+                if ($span.text() == data.errorNotBusinessEmail){ 
+                    this.errorMessage().should('be.visible')
+                    .and('contain', data.errorNotBusinessEmail)
+                } else if ($span.attr('text') != data.errorNotBusinessEmail){
+                    this.errorMessage().should('be.visible')
+                    .and('contain', data.errorRecaptchaSignUp)
+                }
+            })
+        }) 
     }
-        /*cy.fixture('const').then((data) => {
-            this.errorMessage().should('be.visible')
-            //.and('contain', data.errorNotBusinessEmail)
-            .and('contain', data.errorRecaptchaSignUp)
-            
-
-        })*/
-     
+    checkNotBusinessEmailError(){
+        cy.fixture('const').then((data) => {
+            this.errorMessage().then(($span)=> {
+                if ($span.text() == data.errorNotBusinessEmail){ 
+                    this.errorMessage().should('be.visible')
+                    .and('contain', data.errorNotBusinessEmail)
+                } else {
+                    this.errorMessage().should('be.visible')
+                    .and('contain', data.errorRecaptchaSignUp)
+                }
+            })
+        }) 
+    }
 
     clickSiteLogo () {
         this.siteLogo().click()
